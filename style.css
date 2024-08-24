@@ -1,10 +1,17 @@
+:root {
+    --main_font: "Lilita One", sans-serif;
+    --color_white: #FFFFFF;
+    --color_green_primary: #009579;
+    --color_green_secondary: #007A63;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0 auto;
     max-width: 1440px;
+    margin: 0 auto;
 }
 
 .main-container {
@@ -13,33 +20,81 @@ body {
     align-items: center;
 }
 
-button {
-    cursor: pointer;
+.heading {
+    font-family: var(--main_font);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.get-btn {
+    position: relative;
     width: 200px;
     height: 50px;
-    background-color: cadetblue;
-    color: #FFF;
+    padding: 8px 16px;
+    background: var(--color_green_primary);
     border: none;
-    border-radius: 4px;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.get-btn:active {
+    background: var(--color_green_secondary);
+}
+
+.get-btn__text {
+    font-family: var(--main_font);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--color_white);
+    transition: all 0.2s;
+}
+
+.get-btn__spinner .get-btn__text {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.get-btn__spinner::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px solid transparent;
+    border-top-color: var(--color_white);
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
 }
 
 .pictures-container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
-.picture {
+.pictures-container__picture {
     margin: 20px;
     border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
 }
 
-.loader {
-    display: none;
-    flex-direction: row;
-    align-items: center;
-}
-
-.loader svg {
-    height: 50px;
-    width: 70px;
+.picture__show {
+    opacity: 1;
 }

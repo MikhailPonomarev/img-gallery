@@ -4,38 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <title>gallery</title>
 </head>
 <body>
     <main class="main-container">
-        <p>Dogs gallery</p>
+        <p class="heading">Random dogs gallery</p>
+        <button class="get-btn">
+            <span class="get-btn__text">Get some dogs</span>
+        </button>
         <section class="pictures-container"></section>
-        <button class="get-btn">Get some dogs</button>
-        <div class="loader">
-            <span>Loading</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-                <circle fill="#FF156D" stroke="#FF156D" stroke-width="2" r="15" cx="35" cy="100">
-                    <animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35"
-                        keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin="0"></animate>
-                </circle>
-                <circle fill="#FF156D" stroke="#FF156D" stroke-width="2" opacity=".8" r="15" cx="35" cy="100">
-                    <animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35"
-                        keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin="0.05"></animate>
-                </circle>
-                <circle fill="#FF156D" stroke="#FF156D" stroke-width="2" opacity=".6" r="15" cx="35" cy="100">
-                    <animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35"
-                        keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".1"></animate>
-                </circle>
-                <circle fill="#FF156D" stroke="#FF156D" stroke-width="2" opacity=".4" r="15" cx="35" cy="100">
-                    <animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35"
-                        keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".15"></animate>
-                </circle>
-                <circle fill="#FF156D" stroke="#FF156D" stroke-width="2" opacity=".2" r="15" cx="35" cy="100">
-                    <animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35"
-                        keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".2"></animate>
-                </circle>
-            </svg>
-        </div>
     </main>
     <script src="index.js"></script>
 </body>
